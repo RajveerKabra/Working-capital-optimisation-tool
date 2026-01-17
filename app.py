@@ -13,7 +13,7 @@ st.markdown("Upload your financial data to calculate and optimize your Cash Conv
 uploaded_file = st.file_uploader("Choose a CSV file", type="csv")
 
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
+    df = pd.read_csv('working capital data 600 rows.csv')
     
     # Basic Calculations
     df["DSO"] = (df["Accounts_Receivable"] / df["Sales"]) * 365
